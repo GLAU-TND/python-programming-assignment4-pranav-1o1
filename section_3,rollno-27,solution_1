@@ -1,0 +1,34 @@
+#Question_1
+
+p = eval(input())
+k = int(input())
+n = []
+for i in p:
+  if i[0] not in n:
+    n.append(i[0])
+d = {}
+for i in n:
+  d[i] = []
+for i in d:
+  for j in p:
+    if i == j[0]:
+      d[i].append(j[p])
+d2 = {}
+a = 0
+for i in range(len(d)):
+  for j in range(i+1,len(d)):
+    res = len(set(d[list(d)[i]]) & set(d[list(d)[j]]))/float(len(set(d[list(d)(i)]) | set(d[list(d)[j]])))*100
+    if 1!=j:
+      d2[a] = [round(res,2),list(d)[j],list(d)[i]]
+      a = a+1
+b = list(d2.values())
+for k in range(len(b)):
+  if b[k][1]>b[k][2]:
+    c = b[k][1]
+    b[k][1] = b[k][2]
+    b[k][2] = c
+b.sort(key = lambda b: a[0],reverse = True)
+p = []
+for q in range(n):
+  p+ = [(b[q][1],b[q][2])]
+print(p)

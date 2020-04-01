@@ -1,0 +1,9 @@
+#Question_3
+
+p = input()
+k = eval(input())
+c = set()
+for i in k:
+  if p == i[0:len(p)]:
+    c.add(i)
+print(c)

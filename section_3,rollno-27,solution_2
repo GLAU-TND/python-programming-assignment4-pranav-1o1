@@ -1,0 +1,16 @@
+#Question_2
+
+p = eval(input())
+def new(k):
+  try:
+    for i in k:
+      if type(k[i]) == type({}):
+        for j in k[i]:
+          k[i+j] = k[i][j]
+        k.pop(i)
+        new(k)
+    else:
+      print(k)
+  except RuntimeError:
+    pass
+new(p)
